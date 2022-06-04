@@ -1,5 +1,18 @@
 package com.tutorial.crud.security.repository;
 
-public interface UsuarioRepository {
+import java.util.Optional;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.tutorial.crud.security.entity.Usuario;
+
+@Repository
+public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
+	
+	Optional<Usuario> findByUsername(String username);
+	
+	boolean existByUsername(String username);
+	
+	boolean existByEmail(String email);
 }

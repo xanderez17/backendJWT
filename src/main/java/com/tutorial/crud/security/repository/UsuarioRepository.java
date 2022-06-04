@@ -10,9 +10,9 @@ import com.tutorial.crud.security.entity.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
 	
-	Optional<Usuario> findByUsername(String username);
+	public Optional<Usuario> findByUsername(String username);
 	
-	boolean existByUsername(String username);
+	public boolean existsByUsername(String username);
 	
-	boolean existByEmail(String email);
+	public boolean existsByEmail(String email);
 }

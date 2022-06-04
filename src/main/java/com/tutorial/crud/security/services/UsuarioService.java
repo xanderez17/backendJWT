@@ -14,18 +14,18 @@ import com.tutorial.crud.security.repository.UsuarioRepository;
 public class UsuarioService {
 	
 	@Autowired
-	UsuarioRepository usuarioRepository;
+	public UsuarioRepository usuarioRepository;
 	
 	public Optional<Usuario> getByUsername(String username){
 		return usuarioRepository.findByUsername(username);
 	}
 	
-	public boolean existByUsername(String username) {
-		return usuarioRepository.existByUsername(username);
+	public boolean existsByUsername(String username) {
+		return usuarioRepository.existsByUsername(username);
 	}
 	
-	public boolean existByEmail(String email) {
-		return usuarioRepository.existByEmail(email);
+	public boolean existsByEmail(String email) {
+		return usuarioRepository.existsByEmail(email);
 	}
 	
 	public void save(Usuario usuario) {

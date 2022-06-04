@@ -11,6 +11,6 @@ import com.tutorial.crud.security.enums.RolNombre;
 @Repository
 public interface RolRepository extends JpaRepository<Rol, Integer>{
 	
-	Optional<Rol> findByRolNombre(RolNombre rolNombre);
+	public Optional<Rol> findByRolNombre(RolNombre rolNombre);
 
 }

@@ -17,7 +17,7 @@ import com.tutorial.crud.security.repository.UsuarioRepository;
 public class RolService {
 
 	@Autowired
-	RolRepository rolRepository;
+	public RolRepository rolRepository;
 	
 	public Optional<Rol> getByUsername(RolNombre rolNombre){
 		return rolRepository.findByRolNombre(rolNombre);

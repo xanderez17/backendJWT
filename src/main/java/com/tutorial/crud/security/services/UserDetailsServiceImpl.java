@@ -13,7 +13,7 @@ import com.tutorial.crud.security.entity.UsuarioPrincipal;
 public class UserDetailsServiceImpl implements UserDetailsService{
 
 	@Autowired
-	private UsuarioService usuarioService;
+	public UsuarioService usuarioService;
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

@@ -24,10 +24,10 @@ import com.tutorial.crud.security.services.UserDetailsServiceImpl;
 public class MainSecurity extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
-	UserDetailsServiceImpl userDetailsServiceImpl;
+	public UserDetailsServiceImpl userDetailsService;
 	
 	@Autowired
-	JwtEntryPoint jwtEntryPoint;
+	public JwtEntryPoint jwtEntryPoint;
 	
 	@Bean
 	public JwtTokenFilter jwtTokenFilter() {
@@ -41,7 +41,7 @@ public class MainSecurity extends WebSecurityConfigurerAdapter{
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(userDetailsServiceImpl).passwordEncoder(passwordEncoder());
+		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
 	}
 
 	@Bean

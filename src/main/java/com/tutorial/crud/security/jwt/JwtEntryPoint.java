@@ -20,6 +20,7 @@ public class JwtEntryPoint implements AuthenticationEntryPoint{
 	private final static Logger logger = LoggerFactory.getLogger(JwtEntryPoint.class);
 	
 	//Rechaza las peticiones no autentificadas enviando respuesta no autorizada
+	
 	@Override
 	public void commence(HttpServletRequest request, HttpServletResponse response,
 			AuthenticationException authException) throws IOException, ServletException {
